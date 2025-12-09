@@ -1,1 +1,356 @@
 Hi narendra yadav
+    1  passwd 
+    2  ls -lart
+    3  systemctl restart ssh
+    4  systemctl reload ssh
+    5  l
+    6  vim /etc/ssh/sshd_config
+    7  systemctl restart ssh
+    8  systemctl reload ssh
+    9  poweroff 
+   10  ls -lart
+   11  apt update 
+   12  apt install git -y
+   13  apt install git 
+   14  git version 
+   15  apt update; apt install git
+   16  ll
+   17  cat .viminfo 
+   18  reset
+   19  ll
+   20  ls -lrt
+   21  ls -lart
+   22  ls
+   23  l
+   24  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+   25  # Add Docker's official GPG key:
+   26  sudo apt-get update
+   27  sudo apt-get install ca-certificates curl
+   28  sudo install -m 0755 -d /etc/apt/keyrings
+   29  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+   30  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   31  # Add the repository to Apt sources:
+   32  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   33    $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   34  sudo apt-get update
+   35  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   36  systemctl enable docker
+   37  docker ps -a
+   38  docker run -itd -p 80:8080 --name=jenkins   jenkins/jenkins:jdk21
+   39  docker ps -a
+   40  docker ps 
+   41  docker exec -it jenkins bash
+   42  hostname -I
+   43  poweroff 
+   44  docker ps 
+   45  docker ps -a
+   46  docker start jenkins 
+   47  docker ps 
+   48  ll
+   49  docker exec -it jenkins bash 
+   50  ll
+   51  mkdir /opt/projet1
+   52  cd /opt/projet1/
+   53  ll
+   54  git https://github.com/khushiramsingh680/studentapp.git
+   55  git clone  https://github.com/khushiramsingh680/studentapp.git
+   56  ll
+   57  docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install
+   58  hostnamectl set-hostname DockerHost
+   59  bash
+   60  apt install maven
+   61  cd /opt/projet1/
+   62  ll
+   63  docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install
+   64  ll
+   65  cd target/
+   66  ll
+   67  docker run --name mysql -e MYSQL_ROOT_PASSWORD=redhat -d mysql:5
+   68  docker ps -a
+   69  docker run --name mysql -e MYSQL_ROOT_PASSWORD=redhat -d mysql:5.6
+   70  docker run -itd --name=tomcat -p 8888:8080 tomcat:9
+   71  hostname -I
+   72  docker ps 
+   73  docker exec -it tomcat bash
+   74  ll
+   75  docker cp studentapp-2.5-SNAPSHOT /usr/local/tomcat/webapps
+   76  docker exec -it tomcat bash
+   77  cd
+   78  docker exec -it mysql bash
+   79  docker ps 
+   80  docker inspect mysql
+   81  docker exec -it tomcat bash 
+   82  docker stop  tomcat 
+   83  docker start  tomcat 
+   84  docker ps 
+   85  mkdir -p ~/nexus-data && chmod 777 ~/nexus-data  
+   86  docker run -d --name nexus -p 8081:8081 -p 5000:5000 -v ~/nexus-data:/nexus-data sonatype/nexus3  
+   87  df -Th
+   88  docker ps 
+   89  hostname -I
+   90  cat /nexus-data/admin.password 
+   91  cd /opt/
+   92  ll
+   93  cd
+   94  dock
+   95  cd /root/nexus-data/
+   96  ll
+   97  cat admin.password 
+   98  cd
+   99  cd /etc/docker/
+  100  ll
+  101  cd 
+  102  vim /etc/docker/daemon.json
+  103  systemctl restart docker
+  104  docker status docker 
+  105  systemctl status docker 
+  106  docker ps 
+  107  docker ps  -s
+  108  docker ps  -a
+  109  docker start 4074a1c710f0
+  110  docker start tomcat 
+  111  docker start mysql 
+  112  telnet 192.168.50.137 5000
+  113  apt install net-tools
+  114  netstat -ntpl
+  115  docker login 192.168.50.137:5000
+  116  ls
+  117  exit
+  118  history 
+  119  docker pull alpine:latest 
+  120  docker tag alpine:latest localhost:5000/my-alpine:1.0  
+  121  docker images 
+  122  docker push 192.168.50.137:5000/my-alpine:1.0 
+  123  docker login 192.168.50.137:5000
+  124  docker push 192.168.50.137:5000/my-alpine:1.0 
+  125  ll
+  126  cd nexus-data/
+  127  ll
+  128  cd
+  129  docker login 192.168.50.137:5000
+  130  cd /root/.docker/
+  131  ll
+  132  cat config.json 
+  133  cd
+  134  docker push 192.168.50.137:5000/my-alpine:1.0
+  135  docker ps 
+  136  docker image
+  137  docker images
+  138  docker push localhost:5000/my-alpine:1.0
+  139  ls 
+  140  docker images 
+  141  docker tag tomcat:9 192.168.50.137:5000/tomcat:9.0
+  142  docker push 192.168.50.137:5000/tomcat:9.0
+  143  ifconfig 
+  144  cd /opt/
+  145  ll
+  146  mkdir Dockerfile 
+  147  cd Dockerfile/
+  148  ll
+  149  vim dockerfile 
+  150  docker build -t .
+  151  vim dockerfile 
+  152  docker build -t my-first-docker-app .
+  153  vim dockerfile 
+  154  docker build -t my-first-docker-app .
+  155  vim dockerfile 
+  156  docker build -t my-first-docker-app .
+  157  df -TH
+  158  docker images 
+  159  docker rmi maven:3.3-jdk-8 alpine:latest  
+  160  df -TH
+  161  docker run my-first-docker-app
+  162  docker images 
+  163  docker run -itd --name=fistcon my-first-docker-app:latest 
+  164  docker ps 
+  165  docker ps -a
+  166  docker rm -f 7d987cb6515a 7eb89d7851f0
+  167  docker ps -a
+  168  docker system df 
+  169  docker help
+  170  docker --h
+  171  docker 
+  172  docker --help
+  173  docker system prune 
+  174  docker system prune -a
+  175  df _TH
+  176  df -Th
+  177  docker ps 
+  178  docker stop 4074a1c710f0 fe95a40ba5c8 a99f8709d55d
+  179  docker ps 
+  180  docker system df 
+  181  docker images 
+  182  ll
+  183  vim dockerfile 
+  184  docker build -t dockerfile .
+  185  vim dockerfile 
+  186  docker build -t dockerfile .
+  187  cd /opt/Dockerfile/
+  188  ll
+  189  docker build -t dockerfile .
+  190  ll
+  191  apt install mvn
+  192  apt update
+  193  apt install mvn
+  194  apt install mavan
+  195  mvn version 
+  196  cd /opt/Dockerfile/
+  197  vim dockerfile 
+  198  cd /opt/Dockerfile/
+  199  vim dockerfile 
+  200  cd /opt/Dockerfile/
+  201  ll
+  202  vim dockerfile 
+  203  ll
+  204  cd ..
+  205  ll
+  206  docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install
+  207  mvn install
+  208  mvn install clean
+  209  ll
+  210  cd projet1/
+  211  ll
+  212  cd studentapp/
+  213  ll
+  214  cd 
+  215  ll
+  216  cd /opt/Dockerfile/
+  217  ll
+  218  docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install
+  219  apt updat maven
+  220  apt update maven
+  221  apt install maven 
+  222  reboot 
+  223  apt update 
+  224  docker ps 
+  225  vim /etc/ssh/sshd_config
+  226  hostname -I
+  227  ip addr
+  228  poweroff 
+  229  cat -n /etc/passwd
+  230  cat -nl  /etc/passwd
+  231  cat -n 20  /etc/passwd
+  232  cat -n 20 | grerp  /etc/passwd
+  233  ls 
+  234  cd delhi/
+  235  ll
+  236  cat >fci.txt
+  237  touch fci.txt 
+  238  ll
+  239  touch -l fci.txt 
+  240  touch -t fci.txt 
+  241  stat fci.txt 
+  242  touch  -t fci.txt 
+  243  stat fci.txt 
+  244  cp /etc/passwd fci.txt 
+  245  cat fci.txt 
+  246  ll
+  247  du -sh fci.txt 
+  248  cat -n 10 
+  249  cat -n 10 fci.txt 
+  250  cat -l 10 fci.txt 
+  251  cat -n 10 fci.txt 
+  252  cat -l 10 fci.txt 
+  253  tac fci.txt 
+  254  tac fci.txt -n 
+  255  tac -n fci.txt 
+  256  tac -l fci.txt 
+  257  tac -n fci.txt 
+  258  tac -n 10 fci.txt  
+  259  ll
+  260  docker ps 
+  261  docker ps -a
+  262  hostname -I
+  263  poweroff 
+  264  git --version 
+  265  apt update git 
+  266  apt update 
+  267  apt update git 
+  268  apt update git* 
+  269  apt install git 
+  270  ps aux | grep unattended
+  271  git --list
+  272  git list
+  273  git --version 
+  274  ls -lart
+  275  hostname -I
+  276  history 
+  277  docker ps -a
+  278  docker start all
+  279  docker start sonatype/nexus3
+  280  docker start all
+  281  docker start sonatype/nexus3
+  282  docker ps -a
+  283  hostname -I
+  284  ls -lart
+  285  docker ps -a
+  286  docker start 4074a1c710f0
+  287  docker start fe95a40ba5c8
+  288  docker start a99f8709d55d
+  289  mkdir /opt/GitHub
+  290  cd /opt/GitHub/
+  291  ll
+  292  git init 
+  293  ll
+  294  cd .git/
+  295  ll
+  296  cd ..
+  297  ll
+  298  git status 
+  299  touch test
+  300  ll
+  301  git status 
+  302  touch test.txt
+  303  git status 
+  304  rm -rf test
+  305  git status 
+  306  git add test.txt 
+  307  git status 
+  308  git rm --cached test.txt 
+  309  git status 
+  310  git add test.txt 
+  311  git commit -m "add testing file"
+  312  git status 
+  313  git commit -m "added testing file"
+  314  git config --global user.name "Narendra-12"
+  315  git commit -m "added testing file"
+  316  git config --global user.name Narendra-12
+  317  git config --global user.email "rnarendra.yadav179@gamil.com"
+  318  git config --global user.email rnarendra.yadav179@gamil.com
+  319  git status 
+  320  git commit -m "add testing file"
+  321  git status 
+  322  ll
+  323  rm test.txt 
+  324  git status 
+  325  git restore test.txt
+  326  git status 
+  327  vim test.txt 
+  328  git status 
+  329  git add test.txt 
+  330  git status 
+  331  git commit -m "add testing file"
+  332  git status 
+  333  s
+  334  ls 
+  335  vim 1projet.txt
+  336  git status
+  337  ll
+  338  rm -rf 1
+  339  ll
+  340  git status
+  341  git all 1projet.txt 
+  342  git add 1projet.txt 
+  343  git status
+  344  git commit -m "added 1projet"
+  345  git -v
+  346  git remote -v
+  347  git status 
+  348  git remote set-url origin https://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@github.com/Narendra-12/Devops2026-2026.git
+  349  git remote -v
+  350  git push origin master
+  351  git brach
+  352  git branch
+  353  history 
+  354  ll
+  355  history >> test.txt 
