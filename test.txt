@@ -1,4 +1,5 @@
-Hi narendra yadav
+Hi narendra yadav 
+Devops classes 
     1  passwd 
     2  ls -lart
     3  systemctl restart ssh
